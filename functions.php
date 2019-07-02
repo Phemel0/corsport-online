@@ -283,3 +283,18 @@ function phemelo_email_order_items_args( $args ) {
     return $args;
  
 }
+
+/**
+ * ------------------------------------------------------------------------------------------------
+ * Adds an image of the item that's ordered
+ * ------------------------------------------------------------------------------------------------
+ */
+add_filter( 'woocommerce_email_order_items_args', 'corsport_email_order_items_args', 10, 1 );
+ 
+function corsport_email_order_items_args( $args ) {
+ 
+    $args['show_image'] = true;
+ 
+    return $args;
+ 
+}
